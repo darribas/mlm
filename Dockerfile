@@ -1,3 +1,5 @@
+# This is a slight modification from
+# https://github.com/ContinuumIO/docker-images/blob/master/miniconda3/Dockerfile
 FROM debian:8.5
 
 MAINTAINER Kamil Kwiek <kamil.kwiek@continuum.io>
