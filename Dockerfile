@@ -33,5 +33,5 @@ ENV PATH /opt/conda/bin:$PATH
 RUN conda-env create -f env.yml
 
 ENTRYPOINT [ "/usr/bin/tini", "--" ]
-CMD [ "/bin/bash" ]
+CMD [ "start.sh" ]
 
