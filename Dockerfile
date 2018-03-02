@@ -31,6 +31,7 @@ RUN apt-get install -y g++
 ENV PATH /opt/conda/bin:$PATH
 
 RUN conda-env create -f env.yml
+RUN conda clean -tipsy
 
 ENTRYPOINT [ "tini", "--" ]
 CMD [ "start.sh" ]
