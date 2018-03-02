@@ -32,6 +32,9 @@ ENV PATH /opt/conda/bin:$PATH
 
 RUN conda-env create -f env.yml
 
-ENTRYPOINT [ "/usr/bin/tini", "--" ]
+ENTRYPOINT [ "tini", "--" ]
 CMD [ "start.sh" ]
+
+# Add local files as late as possible to avoid cache busting
+COPY start.sh /usr/local/bin/
 
